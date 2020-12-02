@@ -1,3 +1,3 @@
 # [KimGreenbush.github.io](https://kimgreenbush.github.io/)
 
-A simple portfolio to showcase my projects.
+A place to describe who I am, why I'm passionate about coding, and display my projects.
