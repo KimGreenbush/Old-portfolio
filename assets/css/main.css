@@ -88,7 +88,7 @@ input, select, textarea {
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: rgb(104, 104, 104);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -1752,6 +1752,8 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
 		}
 
 		.image.avatar48 {
@@ -1761,11 +1763,13 @@ input, select, textarea {
 
 		.image.avatar48 img {
 			width: 100px;
+			border-radius: 25%;
 		}
 
 		.image.fit {
 			display: block;
 			width: 100%;
+			border-radius: 15px;
 		}
 
 		.image.featured {
