@@ -224,12 +224,22 @@ input, select, textarea {
 				width: 1200px;
 			}
 
+			iframe {
+				max-width: 1200px;
+				max-height: 900px;
+			}
+
 		}
 
 		@media screen and (min-width: 961px) and (max-width: 1620px) {
 
 			.container {
 				width: 960px;
+			}
+
+			iframe {
+				max-width: 960px;
+				max-height: 720px;
 			}
 
 		}
@@ -240,6 +250,11 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			iframe {
+				max-width: 960px;
+				max-height: 720px;
+			}
+
 		}
 
 		@media screen and (max-width: 960px) {
@@ -248,12 +263,22 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			iframe {
+				max-width: 740px;
+				max-height: 555px;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.container {
 				width: 100%;
+			}
+
+			iframe {
+				max-width: 280px;
+				max-height: 210px;
 			}
 
 		}
@@ -1775,6 +1800,7 @@ input, select, textarea {
 		.image.featured {
 			display: block;
 			width: 100%;
+			height: 100%;
 			margin: 0 0 2em 0;
 		}
 
