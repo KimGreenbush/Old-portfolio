@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", function () {
     function success() {
         form.reset()
         button.style = "display:none"
-        status.innerHTML = "Thank you for the message!"
+        status.innerHTML = "Thank you!"
     }
 
     function error() {
@@ -30,10 +30,13 @@ function ajax(method, url, data, success, error) {
     xhr.open(method, url)
     xhr.setRequestHeader("Accept", "application/json")
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 200) {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return
+        if (xhr.status === 200) {
+            console.log("success")
             success(xhr.response, xhr.responseType)
         }
         else {
+            console.log("error", xhr.status)
             error(xhr.status, xhr.response, xhr.responseType)
         }
     }
