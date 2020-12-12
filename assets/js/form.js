@@ -30,12 +30,12 @@ function ajax(method, url, data, success, error) {
     xhr.open(method, url)
     xhr.setRequestHeader("Accept", "application/json")
     xhr.onreadystatechange = function () {
-        if (xhr.readyState === 200) {
-            success(xhr.response, xhr.responseType)
-        }
-        else {
-            error(xhr.status, xhr.response, xhr.responseType)
-        }
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+		if (xhr.status === 200) {
+			success(xhr.response, xhr.responseType)
+		} else {
+			error(xhr.status, xhr.response, xhr.responseType)
+		}
     }
     xhr.send(data)
 }
