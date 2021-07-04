@@ -1,5 +1,4 @@
-# [KimGreenbush.github.io](https://kimgreenbush.github.io/)
-
+# Old Portfolio
 
 ## Description
 A simple portfolio site to display my passion for coding and projects.
