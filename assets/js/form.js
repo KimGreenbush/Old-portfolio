@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
             Host : "smtp.gmail.com",
             Username : env.USERNAME,
             Password : env.PASSWORD ,
-            To : 'kimberley@tsukinomegami.com',
+            To : env.USERNAME,
             From : form.email,
             Subject : form.name,
             Body : form.message
