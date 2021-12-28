@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", function () {
             Host : env.HOST,
             Username : env.USERNAME,
             Password : env.PASSWORD ,
-            To : env.USERNAME,
+            To : form.action,
             From : form.email,
             Subject : form.name,
             Body : form.message
