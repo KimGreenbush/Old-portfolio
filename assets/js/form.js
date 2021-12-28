@@ -17,11 +17,11 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     // form submission
-    form.addEventListener("submit", function (e) {
-        e.preventDefault()
-        var data = new FormData(form)
-        ajax(form.method, form.action, data, success, error)
-    })
+    // form.addEventListener("submit", function (e) {
+    //    e.preventDefault()
+    //    var data = new FormData(form)
+    //    ajax(form.method, form.action, data, success, error)
+    // })
 })
 
 // ajax request
