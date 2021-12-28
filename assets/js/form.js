@@ -22,9 +22,9 @@ window.addEventListener("DOMContentLoaded", function () {
         var data = new FormData(form)
         // ajax(form.method, form.action, data, success, error)
         Email.send({
-            Host : secrets.HOST,
-            Username : secrets.USERNAME,
-            Password : secrets.PASSWORD,
+            Host : env.HOST,
+            Username : env.USERNAME,
+            Password : env.PASSWORD,
             To : form.action,
             From : form.email,
             Subject : form.name,
