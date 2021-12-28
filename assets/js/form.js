@@ -4,6 +4,9 @@ window.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("my-form")
     var button = document.getElementById("form-button")
     var status = document.getElementById("form-status")
+    const host = process.env.HOST
+    const username = process.env.USERNAME
+    const password = process.env.PASSWORD
 
     // success and error funcs
     function success() {
@@ -22,9 +25,9 @@ window.addEventListener("DOMContentLoaded", function () {
         var data = new FormData(form)
         // ajax(form.method, form.action, data, success, error)
         Email.send({
-            Host : env.HOST,
-            Username : env.USERNAME,
-            Password : env.PASSWORD,
+            Host : host,
+            Username : username,
+            Password : password,
             To : form.action,
             From : form.email,
             Subject : form.name,
