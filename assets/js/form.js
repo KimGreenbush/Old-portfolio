@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function () {
         status.innerHTML = "It looks like something went wrong."
     }
 
-     form submission
+     // form submission
      form.addEventListener("submit", function (e) {
         e.preventDefault()
         var data = new FormData(form)
