@@ -4,10 +4,6 @@ window.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("my-form")
     var button = document.getElementById("form-button")
     var status = document.getElementById("form-status")
-    
-    const host = env.HOST
-    const username = env.USERNAME
-    const password = env.PASSWORD
 
     // success and error funcs
     function success() {
@@ -24,36 +20,25 @@ window.addEventListener("DOMContentLoaded", function () {
      form.addEventListener("submit", function (e) {
         e.preventDefault()
         var data = new FormData(form)
-        // ajax(form.method, form.action, data, success, error)
-        Email.send({
-            Host : host,
-            Username : username,
-            Password : password,
-            To : form.action,
-            From : form.email,
-            Subject : form.name,
-            Body : form.message
-        }).then(
-          message => alert(message)
-        )
+        ajax(form.method, form.action, data, success, error)
      })
 })
 
 // ajax request
-// function ajax(method, url, data, success, error) {
-//    var xhr = new XMLHttpRequest()
-//    xhr.open(method, url)
-//    xhr.setRequestHeader("Accept", "application/json")
-//    xhr.onreadystatechange = function () {
-//        if (xhr.readyState !== XMLHttpRequest.DONE) return
-//        if (xhr.status === 200) {
-//            console.log("success")
-//            success(xhr.response, xhr.responseType)
-//        }
-//        else {
-//            console.log("error", xhr.status, xhr.response, xhr.responseType)
-//            error()
-//        }
-//    }
-//    xhr.send(data)
-// }
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest()
+    xhr.open(method, url)
+    xhr.setRequestHeader("Accept", "application/json")
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return
+        if (xhr.status === 200) {
+            console.log("success")
+            success(xhr.response, xhr.responseType)
+        }
+        else {
+            console.log("error", xhr.status, xhr.response, xhr.responseType)
+            error()
+        }
+    }
+    xhr.send(data)
+}
