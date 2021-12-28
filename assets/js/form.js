@@ -12,8 +12,9 @@ window.addEventListener("DOMContentLoaded", function () {
         status.innerHTML = "Thank you!"
     }
 
-    function error() {
+    function error(status, response, type) {
         status.innerHTML = "It looks like something went wrong."
+        console.log(status, response, type)
     }
 
     // form submission
