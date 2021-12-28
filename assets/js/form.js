@@ -12,9 +12,8 @@ window.addEventListener("DOMContentLoaded", function () {
         status.innerHTML = "Thank you!"
     }
 
-    function error(status, response, type) {
+    function error() {
         status.innerHTML = "It looks like something went wrong."
-        console.log(status, response, type)
     }
 
     // form submission
@@ -37,8 +36,8 @@ function ajax(method, url, data, success, error) {
             success(xhr.response, xhr.responseType)
         }
         else {
-            console.log("error", xhr.status)
-            error(xhr.status, xhr.response, xhr.responseType)
+            console.log("error", xhr.status, xhr.status, xhr.response, xhr.responseType)
+            error()
         }
     }
     xhr.send(data)
