@@ -36,7 +36,7 @@ function ajax(method, url, data, success, error) {
             success(xhr.response, xhr.responseType)
         }
         else {
-            console.log("error", xhr.status, xhr.status, xhr.response, xhr.responseType)
+            console.log("error", xhr.status, xhr.response, xhr.responseType)
             error()
         }
     }
