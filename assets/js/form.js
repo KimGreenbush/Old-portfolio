@@ -4,9 +4,9 @@ window.addEventListener("DOMContentLoaded", function () {
     var form = document.getElementById("my-form")
     var button = document.getElementById("form-button")
     var status = document.getElementById("form-status")
-    const host = process.env.HOST
-    const username = process.env.USERNAME
-    const password = process.env.PASSWORD
+    const host = env.HOST
+    const username = env.USERNAME
+    const password = env.PASSWORD
 
     // success and error funcs
     function success() {
