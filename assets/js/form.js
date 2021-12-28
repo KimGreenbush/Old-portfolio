@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
 function ajax(method, url, data, success, error) {
     var xhr = new XMLHttpRequest()
     xhr.open(method, url)
-    xhr.setRequestHeader("Accept", "*/*")
+    xhr.setRequestHeader("Accept", "application/json")
     xhr.onreadystatechange = function () {
         if (xhr.readyState !== XMLHttpRequest.DONE) return
         if (xhr.status === 200) {
